@@ -3,8 +3,8 @@ CREATE DATABASE cqlibrary; -- Create a Table in DATABASE';
 -- Create a Student Table ';
 CREATE TABLE student(
     student_id SERIAL PRIMARY KEY,
-    first_name VARCHAR(40),
-    last_name VARCHAR(40)
+    first_name VARCHAR(50),
+    last_name VARCHAR(50)
 );
 
 CREATE TABLE book(
