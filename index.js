@@ -14,7 +14,7 @@ app.use(express.json()); //allow us to access the req.body(getting data from cli
 //get a student list
 app.get("/student", async (req, res) => {
     try {
-      const studentList = await pool.query("SELECT * FROM student ORDER BY student_name ASC");
+      const studentList = await pool.query("SELECT * FROM student ORDER BY first_name ASC");
       res.json(studentList.rows);
     } catch (err) {
       console.error(err.message);
