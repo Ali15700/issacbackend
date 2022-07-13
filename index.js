@@ -14,7 +14,7 @@ app.use(express.json()); //allow us to access the req.body(getting data from cli
 //get a student list
 app.get("/student", async (req, res) => {
     try {
-      const studentList = await pool.query("SELECT * FROM student");
+      const studentList = await pool.query("SELECT * FROM student ORDER BY student_name ASC");
       res.json(studentList.rows);
     } catch (err) {
       console.error(err.message);
@@ -84,7 +84,7 @@ app.delete("/student/:id", async (req, res) => {
   //get BOOK list(Read)
 app.get("/book", async (req, res) => {
     try {
-      const bookList = await pool.query("SELECT * FROM book ORDER BY book_Name ASC");
+      const bookList = await pool.query("SELECT * FROM book ORDER BY book_name ASC");
       res.json(bookList.rows);
     } catch (err) {
       console.error(err.message);
