@@ -6,7 +6,7 @@ const pool = new Pool({
     password: "alics",
     host: "localhost",
     port: 5432,
-    database: "cqlibrary"
+    database: "issac"
   });
   
   module.exports = pool;
